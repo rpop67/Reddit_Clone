@@ -27,13 +27,27 @@ public class InfoCard {
     {
         return author;
     }
-    public String getTitle()
+    public String getPostTitle()
     {
         return title;
     }
     public int getImageres()
     {
         return imageres;
+    }
+
+    public int getUpvotes()
+    {
+        return upvotes;
+    }
+
+    public int getUpshares()
+    {
+        return upshares;
+    }
+    public int getUpcomments()
+    {
+        return upcomments;
     }
 }
 

@@ -3,6 +3,7 @@ package com.example.android.reddit_clone;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.android.reddit_clone.Fragments.FragmentAw;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -82,17 +84,26 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.all) {
+            android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.layoutMain, new FragmentAw());
+            ft.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.aw) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.pics) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.cats) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.gif) {
+
+        } else if (id == R.id.hmm) {
+
+        }else if (id == R.id.altArt) {
+
+        } else if (id == R.id.adviceAnimals) {
+
+        } else if (id == R.id.photoshop) {
 
         }
 

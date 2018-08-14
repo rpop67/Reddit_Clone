@@ -5,6 +5,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navHeadUrl">https://upcity.com/wp-content/uploads/2014/11/reddit-banner.png</string>
     <string name="redditProfilePicture">https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/d8/77/f7/d877f7b3-e485-983b-fd8b-e31c33faed0e/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg</string>
-
     <string name="action_settings">Settings</string>
 </resources>
