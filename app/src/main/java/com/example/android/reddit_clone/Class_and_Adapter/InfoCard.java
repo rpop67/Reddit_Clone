@@ -23,30 +23,35 @@ public class InfoCard {
 
     }
 
-    public String getAuthor()
-    {
+    public InfoCard(String sentAuthor, String sentTitle, int sentUpvotes, int sentUpComments, int sentUpShares) {
+        author = sentAuthor;
+        title = sentTitle;
+        upvotes = sentUpvotes;
+        upcomments = sentUpComments;
+        upshares = sentUpShares;
+    }
+
+    public String getAuthor() {
         return author;
     }
-    public String getPostTitle()
-    {
+
+    public String getPostTitle() {
         return title;
     }
-    public int getImageres()
-    {
+
+    public int getImageres() {
         return imageres;
     }
 
-    public int getUpvotes()
-    {
+    public int getUpvotes() {
         return upvotes;
     }
 
-    public int getUpshares()
-    {
+    public int getUpshares() {
         return upshares;
     }
-    public int getUpcomments()
-    {
+
+    public int getUpcomments() {
         return upcomments;
     }
 }

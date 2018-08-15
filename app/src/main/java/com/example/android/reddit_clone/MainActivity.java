@@ -90,6 +90,9 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
 
         } else if (id == R.id.aw) {
+            android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.layoutMain, new FragmentAw());
+            ft.commit();
 
         } else if (id == R.id.pics) {
 

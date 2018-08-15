@@ -39,20 +39,25 @@ public class InfoAdapter extends ArrayAdapter<InfoCard> {
         TextView authorTextView = listItemView.findViewById(R.id.main_author_name);
         authorTextView.setText(currentData.getAuthor());
 
+
         TextView titleTextView = listItemView.findViewById(R.id.main_title);
         titleTextView.setText(currentData.getPostTitle());
+
 
         TextView upvotesTextView=listItemView.findViewById(R.id.main_upvote_count);
         upvotesTextView.setText(currentData.getUpvotes());
 
+
         TextView commentsTextView=listItemView.findViewById(R.id.main_comment_count);
         commentsTextView.setText(currentData.getUpcomments());
+
 
         TextView sharesTextView=listItemView.findViewById(R.id.main_share_count);
         sharesTextView.setText(currentData.getUpshares());
 
+
         ImageView postImageView=listItemView.findViewById(R.id.main_post_image);
-        postImageView.setImageResource(currentData.getImageres());
+        //postImageView.setImageResource(currentData.getImageres());
 
 
         //reached end

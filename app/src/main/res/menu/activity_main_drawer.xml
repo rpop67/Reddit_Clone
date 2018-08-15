@@ -6,41 +6,32 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/all"
-            android:icon="@drawable/ic_menu_camera"
             android:title="All" />
 
         <item
             android:id="@+id/aw"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="Aww" />
         <item
             android:id="@+id/pics"
-            android:icon="@drawable/ic_menu_manage"
             android:title="Pics" />
 
         <item
             android:id="@+id/cats"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="Cats" />
         <item
             android:id="@+id/gif"
-            android:icon="@drawable/ic_menu_manage"
             android:title="gif" />
         <item
             android:id="@+id/hmm"
-            android:icon="@drawable/ic_menu_manage"
             android:title="Hmm" />
         <item
             android:id="@+id/altArt"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="Alternative art" />
         <item
             android:id="@+id/adviceAnimals"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="Advice animals" />
         <item
             android:id="@+id/photoshop"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="Photoshop battles" />
     </group>
 
