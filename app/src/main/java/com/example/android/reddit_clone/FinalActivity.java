@@ -7,14 +7,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class FinalActivity extends AppCompatActivity {
-   // static TextView data;
-    //Button click;
+    static TextView data;
+   Button click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.post_layout);
-       /* data=findViewById(R.id.dataField);
+        setContentView(R.layout.activity_final);
+       data=findViewById(R.id.dataField);
         click = findViewById(R.id.button);
         click.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,7 +22,7 @@ public class FinalActivity extends AppCompatActivity {
                 FetchData process = new FetchData();
                 process.execute();
             }
-        });*/
+        });
 
     }
 }

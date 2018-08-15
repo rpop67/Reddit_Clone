@@ -1,5 +1,6 @@
 /**
  * Created by Akanksha_Rajwar on 15-08-2018.
+ * FetchData Class
  */
 package com.example.android.reddit_clone;
 
@@ -34,14 +35,15 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
     String dataParsed = "";
     String parsedData="";
     String singleParsed ="";
-    static int total;
+    public static  int total;
+    final ArrayList<InfoCard> JSONDataList = new ArrayList<InfoCard>();
 
     //Arrays for storing manipulated data respectively
-    static String Author[];
-    static int Shares[];
-    static int Comments[];
-    static String Title[];
-    static int Ups[];
+    public static String Author[];
+    public static int Shares[];
+    public static int Comments[];
+    public  static String Title[];
+    public static int Ups[];
 
     @Override
     protected Void doInBackground(Void... voids) {
@@ -61,7 +63,7 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
             }
          //start here
 
-            JSONObject response= new JSONObject(data);
+
                 JSONObject baseJSONResponse = new JSONObject(data);
 
                 //Getting head "kind".
@@ -80,7 +82,7 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
                 Author=new String[total];
                 Shares=new int[total];
                 Comments=new int[total];
-                //Array has 25 items. Single item contains --> kind and data again.
+
                 for (int i = 0; i < childrenArray.length(); i++) {
 
                     //Getting the first object.
@@ -120,6 +122,8 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
          return null;
     }
 
+
+
     static public int getJSONShares(int index)
     {
         return Shares[index];
@@ -135,29 +139,33 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
         return Author[index];
     }
 
-    static public int getTotal()
+     public static int getTotal()
     {
         return total;
     }
 
-    static public String getJSONTitle(int index)
+     public static String getJSONTitle(int index)
     {
         return Title[index];
     }
 
-    static public int getJSONUps(int index)
+     public static int getJSONUps(int index)
     {
         return Ups[index];
     }
 
+    public ArrayList<InfoCard> CreateJSONList()
+    {
+        return JSONDataList;
+    }
 
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-
-
-
-       // FinalActivity.data.setText(Comments[9]+"");
+        for (int i = 0; i < total; i++)
+        {
+            JSONDataList.add(new InfoCard(Author[i],Title[i],Ups[i],Comments[i],Shares[i]));
+        }
 
     }
 }

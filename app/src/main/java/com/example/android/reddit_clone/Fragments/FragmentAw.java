@@ -20,6 +20,13 @@ import java.util.ArrayList;
  */
 
 public class FragmentAw extends android.support.v4.app.Fragment {
+    String postTitle;
+    int postUps;
+    int postComments;
+    int postShares;
+    String postAuthor;
+    static FetchData fetch;
+    int count;
 
 
     @Nullable
@@ -27,27 +34,27 @@ public class FragmentAw extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_layout, container, false);
 
-        final ArrayList<InfoCard> JSONDataList = new ArrayList<InfoCard>();
+        fetch = new FetchData();
+        final ArrayList<InfoCard> JSONList = fetch.CreateJSONList();
 
-        int count= FetchData.getTotal();
-        String postTitle;
-        int postUps;
-        int postComments;
-        int postShares;
-        String postAuthor;
+           // JSONDataList.add(new InfoCard("lala","hoho",456,454,232));}
+        /*JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(1),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(2),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(3),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(4),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));
+        JSONDataList.add(new InfoCard("lala",fetch.getJSONTitle(0),456,454,232));*/
 
 
-        for(int i=0;i<count;i++)
-        {
-            postTitle=FetchData.getJSONTitle(i);
-            postUps=FetchData.getJSONUps(i);
-            postAuthor=FetchData.getJSONAuthor(i);
-            postComments=FetchData.getJSONComments(i);
-            postShares=FetchData.getJSONShares(i);
-            JSONDataList.add(new InfoCard(postAuthor,postTitle,postUps,postComments,postShares));
-
-        }
-        InfoAdapter adapter = new InfoAdapter(getContext(), JSONDataList);
+       // }
+        InfoAdapter adapter = new InfoAdapter(getContext(), JSONList);
         final ListView listView = view.findViewById(R.id.list);
         listView.setAdapter(adapter);
 
